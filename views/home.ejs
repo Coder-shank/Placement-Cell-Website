@@ -1,0 +1,20 @@
+
+<ul>
+    <% for(let student of students){ %>
+        
+        <li>
+            
+           <a href="/Students/<%= student.id %>" >
+            <%= student.Name %>
+
+           </a> 
+           
+
+        </li>
+    <% } %> 
+   
+</ul>
+
+<a href="/Students/SsignUp"> Add Student </a>
+
+

@@ -1,0 +1,21 @@
+
+<h1> Inteview page</h1>
+
+
+<a href="/Students/interviewForm"> Add Student </a>
+
+
+<ul>
+    <% for(let i of interview){ %>
+        
+        <li>
+         
+            
+        <a href="/Students/InterviewHome/<%=i.id %>"> 
+            <%= i.Company_Name %>
+        </a>
+
+        </li>
+    <% } %> 
+   
+</ul>

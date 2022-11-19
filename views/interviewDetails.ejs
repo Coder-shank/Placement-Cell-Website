@@ -1,0 +1,41 @@
+<h1> Interview Details</h1>
+
+<p>  Company_Name:<%= interview.Company_Name %> </p>
+
+<p>  Date:        <%= interview.Date %> </p>
+
+<p> Current Result Status: <%= interview.Result %></p>
+
+<p>  Update Result: </p> 
+
+<form action="/Students/InterviewHome/:id" method="post">
+      <input type="radio" name="Result" value="PASS">
+      <label for="Result">PASS</label><br>
+      <input type="hidden" name="Sid" value="<%= interview.id %>">
+
+      <input type="radio"  name="Result" value="FAIL">
+      <label for="Result">FAIL</label><br>
+
+      <input type="radio" name="Result" value="On-Hold">
+      <label for="Result" > On-Hold</label> <br>
+
+      <input type="radio" name="Result" value="Didn't-Attempt">
+      <label for="Result" > Didn't Attempt</label>
+    <br>
+      <button type="submit" value="/Students/InterviewHome/:id" >
+        Update Result
+     </button>
+</form>
+
+
+<form action="/Students/InterviewHome/:id/Save" method="post">
+  <input type="hidden" name="Sid" value="<%= interview.id %>">
+
+  <h1> Click to Download</h1> 
+  <button type="submit" value="/Students/InterviewHome/:id/Save" >
+    Download
+ </button>
+</form>
+
+
+

@@ -1,0 +1,38 @@
+<p> Name: <%= student.Name %> </p>
+<p> College:  <%= student.College%> </p>
+<p> Batch: <%=  student.Batch %> </p>
+<p> DSA_Final_Score:<%=student.DSA_Final_Score %> </p>
+<p> WebD_Final_Score:<%=student.WebD_Final_Score %> </p>
+<p> React_Final_Score:<%=student.React_Final_Score %> </p>
+<p> Interview:
+</p>
+<ul>
+<% for (let i of student.Interview){ %>
+<li>
+    <a href="/Students/InterviewHome/<%=i.id %>"> 
+        <%= i.Company_Name %>
+    </a>
+</li>
+<% } %>
+</ul>
+
+<form action="/Students/scheduleInterview" method="post">
+
+    <label for="Company_Name"> Company_Name</label>
+    <input type="text" name="Company_Name">
+
+    <!-- <label for="Student"> Student</label>  -->
+    <input type="hidden" value="<%=student.id %>" name="Student"> 
+    
+    <label for="Date">Date</label>
+    <input type="date" name="Date">
+
+    <label for="Result"> Didn't Attempt </label>
+    <input type="checkbox" name="Result" value="Didn't-Attempt">
+    
+
+    <button type="submit" value="/Students/scheduleInterview" >
+       Schedule new Interview
+    </button>
+
+</form>
