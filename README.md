@@ -1,6 +1,6 @@
 # Placement-Cell-Website
 
-I have created a website for an employee working in placement cell debartment of any institution.
+I have created a website for an employee working in placement cell department of any institution.
 # Setup
 1. Download my code 
 2. open in Virtual Studio
