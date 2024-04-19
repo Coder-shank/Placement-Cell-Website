@@ -2,7 +2,8 @@ const express = require('express');
 
 const app = express();
 
-const port = 8000;
+const port = process.env.PORT || 8000;
+
 const cookieParser = require('cookie-parser');
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
